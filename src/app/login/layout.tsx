@@ -6,7 +6,7 @@ export default async function LoginLayout({
 }) {
   return (
     <div className={styles.login}>
-      <div className={styles.form}>{children}</div>
+      <div className={styles.forms}>{children}</div>
     </div>
   );
 }
