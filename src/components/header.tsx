@@ -6,7 +6,7 @@ export default async function Header() {
   const user = true;
 
   return (
-    <header className={styles.header}>
+    <div className={styles.header}>
       <nav className={`${styles.nav} container`}>
         <Link className={styles.logo} href={"/"}>
           <Image
@@ -27,6 +27,6 @@ export default async function Header() {
           </Link>
         )}
       </nav>
-    </header>
+    </div>
   );
 }
