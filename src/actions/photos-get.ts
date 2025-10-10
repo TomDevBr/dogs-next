@@ -1,6 +1,6 @@
-"use server";
+'use server';
 
-export type IPhoto = {
+export type Photo = {
   id: number;
   author: string;
   title: string;
@@ -8,10 +8,14 @@ export type IPhoto = {
   src: string;
   peso: string;
   idade: string;
-  acessos: number;
+  acessos: string;
+  total_comments: string;
 };
-export default async function ActionsPhotosGet() {
-  const response = await fetch("https://dogsapi.origamid.dev/json/api/photo");
-  const data = await response.json();
-  return data as IPhoto[];
+
+export default async function photosGet() {
+  const response = await fetch(
+    'https://dogsapi.origamid.dev/json/api/photo/?_page=1&_total=6&_user=0',
+  );
+  const data = (await response.json()) as Photo[];
+  return data;
 }

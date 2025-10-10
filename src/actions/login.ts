@@ -1,7 +1,8 @@
 'use server';
-import { TOKEN_POST } from "@/functions/api";
-import apiError from "@/functions/api-error";
-import { cookies } from "next/headers";
+
+import { TOKEN_POST } from '@/functions/api';
+import apiError from '@/functions/api-error';
+import { cookies } from 'next/headers';
 
 export default async function login(state: {}, formData: FormData) {
   const username = formData.get('username') as string | null;
@@ -27,4 +28,5 @@ export default async function login(state: {}, formData: FormData) {
     return apiError(error);
   }
 }
+
 
