@@ -1,9 +1,8 @@
-import Feed from "@/components/feed/feed";
+import photosGet from '@/actions/photos-get';
+import Feed from '@/components/feed/feed';
 
 export default async function Home() {
-  const response = await fetch("https://dogsapi.origamid.dev/json/api/photo");
-  const data = await response.json();
-
+  const data = await photosGet();
   return (
     <section className="container mainContainer">
       <Feed photos={data} />

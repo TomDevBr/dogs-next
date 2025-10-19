@@ -1,4 +1,3 @@
-
 import LoginResetarForm from '@/components/login/login-resetar-form';
 import { Metadata } from 'next';
 

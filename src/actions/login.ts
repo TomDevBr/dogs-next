@@ -28,5 +28,3 @@ export default async function login(state: {}, formData: FormData) {
     return apiError(error);
   }
 }
-
-

@@ -1,13 +1,13 @@
 'use client';
 
-import { useFormState, useFormStatus } from "react-dom";
-import Button from "../forms/button";
-import login from "@/actions/login";
-import Input from "../forms/input";
-import ErrorMessage from "../helper/error-message";
-import { useEffect } from "react";
-import Link from "next/link";
-import styles from "./login-form.module.css";
+import login from '@/actions/login';
+import { useFormState, useFormStatus } from 'react-dom';
+import Button from '@/components/forms/button';
+import Input from '@/components/forms/input';
+import ErrorMessage from '../helper/error-message';
+import React from 'react';
+import Link from 'next/link';
+import styles from './login-form.module.css';
 
 function FormButton() {
   const { pending } = useFormStatus();
@@ -30,7 +30,7 @@ export default function LoginForm() {
     data: null,
   });
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (state.ok) window.location.href = '/conta';
   }, [state.ok]);
 

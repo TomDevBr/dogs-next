@@ -1,16 +1,14 @@
-import React from "react";
+import React from 'react';
+import styles from './button.module.css';
 
-import styles from "./button.module.css";
+type ButtonType = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-type ButtonType =  React.ButtonHTMLAttributes<HTMLButtonElement> ;
-
-
- const Button =  ({children, ...props}: ButtonType) => {
-    return (
-        <button className={styles.button} {...props}>
-            {children}
-        </button>
-    )
-}
+const Button = ({ children, ...props }: ButtonType) => {
+  return (
+    <button {...props} className={styles.button}>
+      {children}
+    </button>
+  );
+};
 
 export default Button;
